@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger v2 — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and checklist tracker for all 55 GTA 6 (Grand Theft Auto VI) PS5 trophies, with a roadmap to the platinum, cited guides and a missable-trophy warning.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">VI</div>
+    <div>
+      <h1>Leonida Ledger <span class="version">v2</span></h1>
+      <p class="subtitle">GTA 6 Trophy Guide &amp; Tracker — PlayStation 5 · 55 trophies · offline</p>
+    </div>
+  </div>
+  <div class="progress-wrap" id="progressWrap" aria-live="polite">
+    <div class="progress-big"><span id="earnedCount">0</span><span class="of">/ 55 earned</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="progress-pct" id="progressPct">0% to platinum</div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <a href="#checklist" class="tab" data-view="checklist">Checklist</a>
+  <a href="#roadmap" class="tab" data-view="roadmap">Roadmap to Platinum</a>
+  <a href="#missable" class="tab" data-view="missable">Missables</a>
+</nav>
+
+<p class="nextup" id="nextUp" hidden></p>
+
+<section class="stats" id="statsBar" aria-label="Progress by group"></section>
+
+<section class="toolbar" aria-label="Filters and save">
+  <div class="filters">
+    <label>Search <input type="search" id="searchBox" placeholder="Search name, guide or tip…" autocomplete="off"></label>
+    <label>Grade
+      <select id="gradeFilter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>Kind
+      <select id="kindFilter">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="missable">Missable</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="online">Online</option>
+      </select>
+    </label>
+    <label>Show
+      <select id="earnedFilter">
+        <option value="all">Earned + unearned</option>
+        <option value="unearned">Unearned only</option>
+        <option value="earned">Earned only</option>
+      </select>
+    </label>
+    <label>Sort
+      <select id="sortOrder">
+        <option value="grade">Grade, then list order</option>
+        <option value="phase">Roadmap phase, then list order</option>
+        <option value="name">Name A–Z</option>
+        <option value="count">PSN count, high to low</option>
+      </select>
+    </label>
+    <label class="check"><input type="checkbox" id="missableOnly"> Missable only</label>
+    <button type="button" id="resetFilters" class="reset">Reset filters</button>
+  </div>
+  <div class="savebox">
+    <label class="spoiler"><input type="checkbox" id="spoilerToggle" checked> Hide story spoilers</label>
+    <button type="button" id="exportBtn">Export progress</button>
+    <button type="button" id="importBtn">Import progress</button>
+    <input type="file" id="importFile" accept="application/json,.json" hidden>
+  </div>
+</section>
+
+<main class="layout">
+  <div class="list-col">
+    <p class="list-meta" id="listMeta"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyMsg" hidden>No trophies match these filters. Try the Reset filters button.</p>
+  </div>
+  <aside class="detail-col" id="detailPane" aria-live="polite">
+    <p class="detail-hint">Select a trophy to read its guide and sources.</p>
+  </aside>
+</main>
+
+<section class="roadmap-view" id="roadmapView" hidden></section>
+<section class="missable-view" id="missableView" hidden></section>
+
+<footer class="foot">
+  <p>Names, descriptions and grades are the official PS5 list (Exophase / PSNProfiles). Guides and quick tips are written for this entry in the author's own words and cite their sources beside each trophy. Where no source has pinned a trigger down yet, the guide says so. No Rockstar logo or artwork is used.</p>
+  <p>Platinum: about 200 hours, 4/10 (PowerPyx). No online trophies. Cheats disable trophies. Progress is saved in this browser only — export it to keep a copy.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
